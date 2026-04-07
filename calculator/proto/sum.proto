@@ -9,6 +9,6 @@ message sumRequest{
 message sumResponse{
   int64 result=1;
 }
-service sumService{
+service SumService{
   rpc Sum (sumRequest) returns (sumResponse);
 }
