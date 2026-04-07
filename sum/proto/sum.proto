@@ -1,0 +1,14 @@
+syntax="proto3";
+
+package sum;
+option go_package="github.com/alvarolucio2007/gRPCPractice/sum/proto";
+message sumRequest{
+  int64 first_number=1;
+  int64 second_number=2;
+}
+message sumResponse{
+  int64 result=1;
+}
+service sumService{
+  rpc Sum (sumRequest) returns (sumResponse);
+}
