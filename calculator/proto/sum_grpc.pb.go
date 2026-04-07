@@ -4,6 +4,7 @@ package proto
 
 import (
 	context "context"
+
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -46,8 +47,7 @@ type SumServiceServer interface {
 }
 
 // UnimplementedSumServiceServer must be embedded to have forward compatible implementations.
-type UnimplementedSumServiceServer struct {
-}
+type UnimplementedSumServiceServer struct{}
 
 func (UnimplementedSumServiceServer) Sum(context.Context, *SumRequest) (*SumResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Sum not implemented")

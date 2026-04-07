@@ -7,10 +7,11 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -158,11 +159,14 @@ func file_calculator_proto_sum_proto_rawDescGZIP() []byte {
 	return file_calculator_proto_sum_proto_rawDescData
 }
 
-var file_calculator_proto_sum_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_calculator_proto_sum_proto_goTypes = []interface{}{
-	(*SumRequest)(nil),  // 0: calculator.sumRequest
-	(*SumResponse)(nil), // 1: calculator.sumResponse
-}
+var (
+	file_calculator_proto_sum_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+	file_calculator_proto_sum_proto_goTypes  = []interface{}{
+		(*SumRequest)(nil),  // 0: calculator.sumRequest
+		(*SumResponse)(nil), // 1: calculator.sumResponse
+	}
+)
+
 var file_calculator_proto_sum_proto_depIdxs = []int32{
 	0, // 0: calculator.sumService.Sum:input_type -> calculator.sumRequest
 	1, // 1: calculator.sumService.Sum:output_type -> calculator.sumResponse
