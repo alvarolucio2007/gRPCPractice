@@ -30,7 +30,7 @@ func NewSumServiceClient(cc grpc.ClientConnInterface) SumServiceClient {
 
 func (c *sumServiceClient) Sum(ctx context.Context, in *SumRequest, opts ...grpc.CallOption) (*SumResponse, error) {
 	out := new(SumResponse)
-	err := c.cc.Invoke(ctx, "/calculator.SumService/Sum", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/calculator.sumService/Sum", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -75,7 +75,7 @@ func _SumService_Sum_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/calculator.SumService/Sum",
+		FullMethod: "/calculator.sumService/Sum",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SumServiceServer).Sum(ctx, req.(*SumRequest))
@@ -84,7 +84,7 @@ func _SumService_Sum_Handler(srv interface{}, ctx context.Context, dec func(inte
 }
 
 var _SumService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "calculator.SumService",
+	ServiceName: "calculator.sumService",
 	HandlerType: (*SumServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -93,5 +93,5 @@ var _SumService_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "sum.proto",
+	Metadata: "calculator/proto/sum.proto",
 }
