@@ -9,4 +9,5 @@ message greetResponse{
 }
 service greetService{
   rpc Greet (greetRequest) returns (greetResponse);
+  rpc GreetManyTimes (greetRequest) returns (stream greetResponse);
 }
