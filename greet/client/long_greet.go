@@ -28,5 +28,6 @@ func doLongGreet(c proto.GreetServiceClient) {
 	if err != nil {
 		log.Fatalf("Error while recieving response from LongGreet %v\n", err)
 	}
+
 	log.Printf("LongGreet: %s\n", res.Result)
 }

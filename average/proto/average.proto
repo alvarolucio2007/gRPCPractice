@@ -1,0 +1,13 @@
+syntax="proto3";
+package average;
+option go_package="github.com/alvarolucio2007/gRPCPractice/average/proto";
+message AverageRequest{
+  int64 number=1;
+}
+message AverageResponse{
+  float number=1;
+}
+
+service AverageService{
+  rpc Average (stream AverageRequest) returns (AverageResponse);
+}
