@@ -14,6 +14,7 @@ func doAverage(c proto.AverageServiceClient) {
 		{Number: 1},
 		{Number: 2},
 		{Number: 3},
+		{Number: 4},
 	}
 	stream, err := c.Average(context.Background())
 	if err != nil {
