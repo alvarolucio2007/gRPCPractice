@@ -11,7 +11,7 @@ import (
 func doPrimesManyTimes(c proto.PrimeServiceClient) {
 	log.Println("doPrimes was invoked")
 	req := &proto.Primes{
-		Number: 999999999,
+		Number: 210,
 	}
 	stream, err := c.PrimeManyTimes(context.Background(), req)
 	if err != nil {

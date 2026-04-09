@@ -16,6 +16,7 @@ type Server struct {
 
 func main() {
 	lis, err := net.Listen("tcp", addr)
+	log.Println("Após lis")
 	if err != nil {
 		log.Fatalf("Failed to listen on %v", err)
 	}
