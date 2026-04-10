@@ -1,0 +1,13 @@
+
+syntax="proto3";
+package max;
+option go_package="github.com/alvarolucio2007/gRPCPractice/max/proto";
+message MaxRequest{
+  int32 number=1;
+}
+message MaxResponse{
+  int32 maximum=1;
+}
+service MaxService{
+  rpc Max (stream MaxRequest) returns (stream MaxResponse);
+}
