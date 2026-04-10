@@ -4,7 +4,6 @@ import (
 	"context"
 	"io"
 	"log"
-	"time"
 
 	"github.com/alvarolucio2007/gRPCPractice/max/proto"
 )
@@ -30,7 +29,6 @@ func doMax(c proto.MaxServiceClient) {
 			if err := stream.Send(req); err != nil {
 				log.Printf("Error %v\n", err)
 			}
-			time.Sleep(1 * time.Second)
 		}
 		if err := stream.CloseSend(); err != nil {
 			log.Printf("Error %v\n", err)
